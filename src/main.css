@@ -1,0 +1,33 @@
+div {
+  border: solid;
+  border-color: white;
+  color: white;
+  margin: 144px 44px 44px 44px
+}
+
+#page {
+  border-color: transparent;
+  margin: 0px 0px 0px 0px
+}
+
+a {
+  display: block;
+  border: solid;
+  border-color: white;
+}
+
+h1 {
+border: solid;
+border-color: white;
+color: whitle;
+margin-top: 0px;
+width: 100%;
+}
+
+body {
+  margin: 0px;
+  background-color:white;
+  background: url('https://getreelcinemas.com//wp-content/uploads/2015/02/Background-Narrow.jpg');
+  background-size: cover;
+  font-size: 18px;
+}
