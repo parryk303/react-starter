@@ -1,33 +1,35 @@
-div {
+.movie {
+  border-color: white;
+  border: solid;
+  color: white;
+  height: 30px;
+  text-align: left;
+  padding: 30px 0px 30px 50px;
+  font-size: 30px;
+}
+
+.container {
   border: solid;
   border-color: white;
-  color: white;
   margin: 144px 44px 44px 44px
 }
 
-#page {
-  border-color: transparent;
-  margin: 0px 0px 0px 0px
-}
 
-a {
-  display: block;
-  border: solid;
-  border-color: white;
-}
 
 h1 {
 border: solid;
 border-color: white;
-color: whitle;
+color: white;
 margin-top: 0px;
-width: 100%;
+text-align: center;
+font-size: 50px;
+padding: 10px;
 }
 
 body {
-  margin: 0px;
-  background-color:white;
-  background: url('https://getreelcinemas.com//wp-content/uploads/2015/02/Background-Narrow.jpg');
+  /* background: url('https://wallpaperaccess.com/full/1773869.jpg'); */
+  /* background: url('https://wallpaperdata.com/wp-content/uploads/2018/09/peter-lewicki-411606-unsplash.jpg'); */
+  background: url('https://wallpapercave.com/wp/wp2411501.jpg');
   background-size: cover;
-  font-size: 18px;
+  /* background: black; */
 }
