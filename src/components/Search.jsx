@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Search = function({searchHandler}) {
+const Search = function({searchHandler}) {
     return (
         <div id='search'>
             <input id='searchBar' type='text' placeholder="Search..."></input>
