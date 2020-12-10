@@ -11,10 +11,27 @@
 .container {
   border: solid;
   border-color: white;
-  margin: 144px 44px 44px 44px
+  margin-left: 44px;
 }
 
+#searchBar {
+  width: 450px;
+  height: 40px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  border-radius: 15px;
+}
 
+#searchButton {
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+#page {
+  margin-top: 144px
+}
 
 h1 {
 border: solid;

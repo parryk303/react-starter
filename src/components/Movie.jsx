@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Movie = function({movie}) {
+const Movie = function({movie}) {
     return (
         <div className='movie'>{movie}</div>
     )
