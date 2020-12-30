@@ -1,132 +1,108 @@
-.movie {
-  border-color: white;
-  border: solid;
-  color: white;
-  height: 40px;
-  text-align: left;
-  padding: 30px 0px 30px 50px;
-  /* margin-left: -53px;
-  margin-top: -32px; */
-  font-size: 30px;
-}
-
-.containerDefault {
-  margin-top: 5px;
-  margin-left: 50px;
-  font-size: 30px;
-  color: white;
-}
-
-.container {
-  border: solid;
-  border-color: white;
-  color: white;
-  margin-top: 5px;
-  margin-left: 50px;
-  height: 30px;
-  text-align: left;
-  padding: 30px 0px 30px 50px;
-  font-size: 30px;
-}
-
-.containerWatched {
-  border: solid;
-  border-color: green;
-  color: white;
-  margin-top: 5px;
-  margin-left: 50px;
-  height: 30px;
-  text-align: left;
-  padding: 30px 0px 30px 50px;
-  font-size: 30px;
-}
-
-.containerNotWatched {
-  border: solid;
-  border-color: Red;
-  color: white;
-  margin-top: 5px;
-  margin-left: 50px;
-  height: 30px;
-  text-align: left;
-  padding: 30px 0px 30px 50px;
-  font-size: 30px;
-}
-
-
-.watchedButtonSelected {
-  background: green;
-  margin-left: 600px;
-}
-
-.watchedButton {
-  margin-left: 600px;
-}
-
-#watchedTab, #notWatchedTab, #allTab {
-  background-color: Green;
-  display: inline;
-  border: solid;
-  border-color: white;
-  height: 60px;
-  padding: 15px;
-  font-size: 30px;
-  margin-left: 50px;
-}
-
-#notWatchedTab {
-  background-color: red;
-  margin-left: 0px;
-}
-
-#allTab {
-  background-color: blue;
-  margin-left: 0px;
-}
-
-#inputField {
-  margin-left: 50px;
-  margin-bottom: 40px;
-}
-
-#search {
-  margin-left: 50px;
-  margin-bottom: 10px;
-  display: inline;
-}
-
-#searchBar, #inputBar {
-  width: 450px;
-  height: 20px;
-  font-size: 15px;
-  border-radius: 15px;
-  padding: 10px;
-}
-
-#searchButton, #inputButton {
-  height: 40px;
-  border-radius: 50%;
-  margin-left: 5px;
-}
-
-#page {
-  margin-top: 144px
-}
-
-h1 {
-border: solid;
-border-color: white;
-color: white;
-margin-top: 0px;
-text-align: center;
-font-size: 50px;
-padding: 10px;
+.navbar {
+  /* background: lightgray; */
+  padding: 1rem 0 1rem 0;
 }
 
 body {
-  /* background: url('https://wallpaperaccess.com/full/1773869.jpg'); */
-  /* background: url('https://wallpaperdata.com/wp-content/uploads/2018/09/peter-lewicki-411606-unsplash.jpg'); */
+  margin: 0;
   background: url('https://wallpapercave.com/wp/wp2411501.jpg');
   background-size: cover;
-  /* background: black; */
+}
+
+h1 {
+  color: white;
+  margin: .5rem;
+  text-align: center;
+  font-size: 50px;
+}
+
+.p2-t {
+  padding-top: 2rem;
+}
+
+.p2-a {
+  padding: 2rem;
+  color: white;
+  border-style: inset;
+}
+
+.p0-a {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border-style: outset;
+}
+
+.p1-a {
+  padding: 1rem;
+}
+
+.m-rl {
+  margin: 0 10% 0 10%;
+}
+
+.lines {
+  border: 2px solid white;
+}
+
+.greenbtn {
+  background:rgb(192,32,28);
+  color: white;
+}
+
+.graybtn {
+  background: lightgray;
+  color: gray;
+}
+
+.f-r {
+  float: right;
+}
+.inline {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+li {
+  list-style: none;
+}
+.bold {
+  font-weight: bold;
+}
+
+img {
+  float: right;
+  height: 200px;
+  width: 150px;
+}
+
+.col {
+  width: 47%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hide {
+  display: none;
+}
+
+.cir {
+  border: none;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor:pointer;
+  border-radius: 50%;
+  margin-top: .5rem;
+}
+
+.filledcir {
+  background-color: green;
+  border: 1px solid black;
+}
+.opencir {
+  background-color: white;
+  border: 1px solid black;
 }
