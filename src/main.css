@@ -1,26 +1,61 @@
-.container {
+#container {
   border: solid;
   border-color: red;
   color: white;
-  margin: 144px 44px 44px 44px
+  margin: 144px 44px 44px 44px;
+  padding: 15px;
 }
 
 .movie {
   border: solid;
   border-color: white;
   color: white;
-  margin: 5px 44px 5px 44px;
+  margin: 0px 44px 5px 44px;
   padding: 20px;
 }
 
-#searchBar, #inputBar {
+#inputBar {
   margin: 5px 0px 5px 44px;
   padding: 10px;
+  display: inline;
 }
 
-#searchButton, #inputButton {
+#inputButton {
   margin: 5px 5px 5px 0px;
   padding: 10px;
+  display: inline;
+}
+
+#watchedTab, #notWatchedTab, #allTab {
+  padding: 10px;
+  display: inline;
+}
+
+#search, #searchBar {
+  margin: 25px 0px 5px 44px;
+  padding: 5px;
+  width: 25%;
+  display: inline;
+}
+
+#searchButton {
+  padding: 5px;
+}
+
+#watchedTab {
+  margin-left: 44px;
+  border: solid;
+  border-color: blue;
+}
+
+#notWatchedTab {
+  border: solid;
+  border-color: yellow;
+}
+
+#allTab {
+  border: solid;
+  border-color: white;
 }
 
 h1 {
