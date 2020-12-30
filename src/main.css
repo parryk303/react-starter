@@ -13,12 +13,12 @@
   padding: 20px;
 }
 
-#searchBar {
+#searchBar, #inputBar {
   margin: 5px 0px 5px 44px;
   padding: 10px;
 }
 
-#searchButton {
+#searchButton, #inputButton {
   margin: 5px 5px 5px 0px;
   padding: 10px;
 }
