@@ -4,6 +4,9 @@ import Search from './Search.jsx';
 import AddMovie from './AddMovie.jsx';
 import WatchedTabs from './WatchedTabs.jsx'
 import CSS from '../main.css';
+const API_KEY = '1aa4b71d59342b08b19dea8b16bcf4aa';
+let str = encodeURI('Lord of the rings');
+const baseURL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
 class App extends React.Component {
   constructor(props){
@@ -39,16 +42,27 @@ class App extends React.Component {
   }
 
   inputHandler(e) {
-    let title = document.querySelector('#inputBar').value;
-    let newMovie = [{
-      title: title,
-      show: true,
-      watched: false
-    }];
+    let query = encodeURI(document.querySelector('#inputBar').value);
+    let url = baseURL + query;
     document.querySelector('#inputBar').value = '';
-    this.setState((state) => {
-      return {movies: state.movies.concat(newMovie)}
-    })
+    fetch(url).then((response) => response.json())
+      .then((data) => {
+        let movieData = data.results[0];
+        console.log(movieData)
+        if (movieData !== undefined) {
+          var newMovie = {
+            title: movieData.title,
+            id: movieData.id,
+            show: true,
+            watched: false,
+            info: [movieData.overview, movieData.vote_average, movieData.release_date]
+          }
+        }
+        this.setState((state) => {
+          return {movies: state.movies.concat(newMovie)}
+        })
+        console.log(this.state);
+      }).catch((err) => console.log(err));
   }
 
   tabHandler(e) {
@@ -64,18 +78,17 @@ class App extends React.Component {
       return movie;
     })
     this.setState({movies: displayedMovies, active: e.target.innerHTML});
-}
+  }
 
-watchHandler(e) {
-  let title = e.target.parentNode.textContent.replace('Watched', '').trim();
-  let watchedMovies = this.state.movies.map((movie) => {
-    if (movie.title === title) {
-      movie.watched = !movie.watched
-    }
-    return movie;
-   })
-   this.setState({movies: watchedMovies});
-}
+  watchHandler(currentMovie) {
+    let watchedMovies = this.state.movies.map((movie) => {
+      if (movie.title === currentMovie.title) {
+        movie.watched = !movie.watched
+      }
+      return movie;
+    })
+    this.setState({movies: watchedMovies});
+  }
 
   render() {
     return (
@@ -85,7 +98,6 @@ watchHandler(e) {
         <div className="tabs" id="notWatchedTab" onClick={this.tabHandler}>Not Watched</div>
         <div className="selectedTab" id="allTab" onClick={this.tabHandler}>All Movies</div>
         <Search searchHandler={this.searchHandler}/>
-
         <WatchedTabs active={this.state.active} movies={this.state.movies} watchHandler={this.watchHandler}/>
       </div>
     )

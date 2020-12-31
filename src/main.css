@@ -46,27 +46,42 @@
   margin-left: 44px;
   border: solid;
   border-color: blue;
+  background-image: linear-gradient(royalblue,lightblue);
 }
 
 #notWatchedTab {
   border: solid;
-  border-color: yellow;
+  border-color: darkgreen;
+  background-image: linear-gradient(green,lightgreen);
 }
 
 #allTab {
   border: solid;
-  border-color: white;
+  border-color: darkorange;
+  background-image: linear-gradient(orange, rgb(204, 162, 84));
 }
 
 h1 {
 border: solid;
 border-color: white;
 color: white;
-margin-top: 10px;
+margin: 10px;
+padding: 15px;
 width: 100%;
 }
 
 body {
-  background: url('https://getreelcinemas.com//wp-content/uploads/2015/02/Background-Narrow.jpg');
+  background: url('https://wallpapercave.com/wp/wp2411501.jpg');
   background-size: cover;
+}
+
+.filledcir {
+  background-color: blue;
+  border: 1px solid black;
+  display: inline;
+}
+.opencir {
+  background-color: white;
+  border: 1px solid black;
+  display: inline;
 }
