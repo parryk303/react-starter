@@ -12,6 +12,7 @@
   color: white;
   margin: 0px 44px 5px 44px;
   padding: 20px;
+  padding-bottom: 70px;
 }
 
 #inputBar {
@@ -84,4 +85,10 @@ body {
   background-color: white;
   border: 1px solid black;
   display: inline;
+}
+
+#thumbnail{
+  height: 200px;
+  float: left;
+  margin-right: 10px;
 }

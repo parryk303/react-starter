@@ -3,13 +3,13 @@ import Movie from './Movie.jsx';
 import Search from './Search.jsx';
 import AddMovie from './AddMovie.jsx';
 import WatchedTabs from './WatchedTabs.jsx'
+import axios from 'axios';
 import CSS from '../main.css';
 const API_KEY = '1aa4b71d59342b08b19dea8b16bcf4aa';
-let str = encodeURI('Lord of the rings');
 const baseURL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -45,24 +45,23 @@ class App extends React.Component {
     let query = encodeURI(document.querySelector('#inputBar').value);
     let url = baseURL + query;
     document.querySelector('#inputBar').value = '';
-    fetch(url).then((response) => response.json())
-      .then((data) => {
-        let movieData = data.results[0];
-        console.log(movieData)
-        if (movieData !== undefined) {
-          var newMovie = {
-            title: movieData.title,
-            id: movieData.id,
-            show: true,
-            watched: false,
-            info: [movieData.overview, movieData.vote_average, movieData.release_date]
-          }
+    axios.get(url).then((response) => {
+      console.log(response);
+      let movieData = response.data.results[0];
+      if (movieData !== undefined) {
+        var newMovie = {
+          title: movieData.title,
+          id: movieData.id,
+          show: true,
+          watched: false,
+          info: [movieData.overview, movieData.vote_average, movieData.release_date, movieData.poster_path]
         }
-        this.setState((state) => {
-          return {movies: state.movies.concat(newMovie)}
-        })
-        console.log(this.state);
-      }).catch((err) => console.log(err));
+      }
+      this.setState((state) => {
+        return {movies: state.movies.concat(newMovie)}
+      })
+      console.log(this.state);
+    }).catch((err) => console.log(err));
   }
 
   tabHandler(e) {
